@@ -1,0 +1,2 @@
+accounts.firefox.com:HSTS	0	16777	1465094750769,1,1
+stats.g.doubleclick.net:HSTS	0	16777	1460429149029,1,0
