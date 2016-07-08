@@ -103,6 +103,27 @@ class CrawlUI:
             excelUtil.excel_write(settings.excel_file_path, settings.excel_first_sheet, "C", str(
                 2 * i + 30), format((float(yesterdayValues[i]) - float(beforeValues[i])) / float(yesterdayValues[i]), '.2%'))
 
+    def europe_stock(self, url):
+        self.browser.get(url)
+        value = self.browser.find_element_by_xpath(settings.dax_xpath_value)
+        rate = self.browser.find_element_by_xpath(settings.dax_xpath_rate)
+        excelUtil.excel_write(settings.excel_file_path,
+                              settings.excel_first_sheet, "C", "22", value)
+        excelUtil.excel_write(settings.excel_file_path,
+                              settings.excel_first_sheet, "C", "23", rate)
+        value = self.browser.find_element_by_xpath(settings.cac_xpath_value)
+        rate = self.browser.find_element_by_xpath(settings.cac_xpath_rate)
+        excelUtil.excel_write(settings.excel_file_path,
+                              settings.excel_first_sheet, "C", "24", value)
+        excelUtil.excel_write(settings.excel_file_path,
+                              settings.excel_first_sheet, "C", "25", rate)
+        value = self.browser.find_element_by_xpath(settings.ukx_xpath_value)
+        rate = self.browser.find_element_by_xpath(settings.ukx_xpath_rate)
+        excelUtil.excel_write(settings.excel_file_path,
+                              settings.excel_first_sheet, "C", "26", value)
+        excelUtil.excel_write(settings.excel_file_path,
+                              settings.excel_first_sheet, "C", "27", rate)
+
     def ex_rate(self):
         self.get_diniw(settings.dollar_index_url)
         self.ex_sub_rate(settings.eurusd_url, 6)
@@ -111,6 +132,7 @@ class CrawlUI:
         self.american_stock(settings.inx_url, 13)
         self.american_stock(settings.dji_url, 15)
         self.american_stock(settings.ixic_url, 17)
+        self.europe_stock(settings.europe_stock)
         self.american_debt(settings.american_debt)
         self.browser.quit()
 

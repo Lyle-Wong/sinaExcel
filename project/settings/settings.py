@@ -93,8 +93,16 @@ ixic_url = "http://stock.sina.com.cn/usstock/quotes/.IXIC.html"
 stock_daily_k_Xpath = "//div[@class='kke_menus_tab_edage']//div[@data-view='kd']/a"
 stock_closed_XPath = "//table/tbody/tr[5]/td/span"
 
+# 欧洲股市
+europe_stock = "http://quote.eastmoney.com/center/europe.html#europe_3"
+dax_xpath_value = "//table[@class='data-table']/tbody/tr[3]/td[8]/span"
+dax_xpath_rate = "//table[@class='data-table']/tbody/tr[3]/td[9]/span"
+cac_xpath_value = "//table[@class='data-table']/tbody/tr[4]/td[8]/span"
+cac_xpath_rate = "//table[@class='data-table']/tbody/tr[4]/td[8]/span"
+ukx_xpath_value = "//table[@class='data-table']/tbody/tr[2]/td[8]/span"
+ukx_xpath_rate = "//table[@class='data-table']/tbody/tr[2]/td[8]/span"
 
-#美国国债
+# 美国国债
 american_debt = "https://www.treasury.gov/resource-center/data-chart-center/interest-rates/Pages/TextView.aspx?data=yield"
 
 american_debt_yesterday_xpath = "//table[@class='t-chart']/tbody/tr[5]/td"
