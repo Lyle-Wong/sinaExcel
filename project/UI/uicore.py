@@ -17,9 +17,6 @@ from logger import logger
 from settings import settings
 
 
-# logger = MyLogger().setup_logging()
-
-
 class CrawlApplication(object):
     """docstring for CrawlApplication"""
 
