@@ -287,3 +287,128 @@
 2016-07-07 14:59:53,612 - logger - INFO - current add extension: C:\Users\i318869\Documents\workplace\sinaExcel-master\Firefox\41\extensions\xpather.xpi
 2016-07-07 14:59:53,628 - logger - INFO - Initialize web browser...
 2016-07-07 15:00:01,260 - logger - INFO - Open URL: http://finance.sina.com.cn/money/forex/hq/DINIW.shtml
+2016-07-08 21:18:20,538 - logger - MainThread - INFO - copy file to desktop...
+2016-07-08 21:18:20,539 - logger - MainThread - INFO - D:\workplace\crawl2excel\sinaExcel
+2016-07-08 21:18:21,272 - logger - MainThread - INFO - Get info from URL:http://caodan.org/page/902
+2016-07-08 21:18:22,117 - logger - MainThread - INFO - get joke....
+2016-07-08 21:18:24,784 - logger - Thread-1 - INFO - root path: D:\workplace\crawl2excel\sinaExcel
+2016-07-08 21:18:25,257 - logger - Thread-1 - INFO - current add extension: D:\workplace\crawl2excel\sinaExcel\Firefox\41\extensions\firebug-2.0.13-fx.xpi
+2016-07-08 21:18:25,688 - logger - Thread-2 - INFO - Get URL: http://www.cnss.com.cn/caches/task/exponent/bdi/month.json?v=146798390568861.1
+2016-07-08 21:18:25,937 - logger - Thread-2 - INFO - data_month: [{'index': '610', 'date': '2016-06-08'}, {'index': '611', 'date': '2016-06-09'}, {'index': '610', 'date': '2016-06-10'}, {'index': '609', 'date': '2016-06-13'}, {'index': '608', 'date': '2016-06-14'}, {'index': '604', 'date': '2016-06-15'}, {'index': '598', 'date': '2016-06-16'}, {'index': '587', 'date': '2016-06-17'}, {'index': '582', 'date': '2016-06-20'}, {'index': '580', 'date': '2016-06-21'}, {'index': '585', 'date': '2016-06-22'}, {'index': '596', 'date': '2016-06-23'}, {'index': '609', 'date': '2016-06-24'}, {'index': '616', 'date': '2016-06-27'}, {'index': '627', 'date': '2016-06-28'}, {'index': '640', 'date': '2016-06-29'}, {'index': '660', 'date': '2016-06-30'}, {'index': '677', 'date': '2016-07-01'}, {'index': '688', 'date': '2016-07-04'}, {'index': '692', 'date': '2016-07-05'}, {'index': '694', 'date': '2016-07-06'}, {'index': '699', 'date': '2016-07-07'}]
+2016-07-08 21:18:25,940 - logger - Thread-2 - INFO - input data: {'index': '677', 'date': '2016-07-01'}
+2016-07-08 21:18:25,940 - logger - Thread-2 - INFO - excel path: C:\Users\lyle9\Desktop\金融市场反应.xlsx, write location(C, 3) and value is: 677
+2016-07-08 21:18:26,195 - logger - Thread-2 - INFO - excel path: C:\Users\lyle9\Desktop\金融市场反应.xlsx, write location(D, 3) and value is: 2016-07-01
+2016-07-08 21:18:26,409 - logger - Thread-2 - INFO - input data: {'index': '688', 'date': '2016-07-04'}
+2016-07-08 21:18:26,410 - logger - Thread-2 - INFO - excel path: C:\Users\lyle9\Desktop\金融市场反应.xlsx, write location(C, 5) and value is: 688
+2016-07-08 21:18:26,611 - logger - Thread-2 - INFO - excel path: C:\Users\lyle9\Desktop\金融市场反应.xlsx, write location(D, 5) and value is: 2016-07-04
+2016-07-08 21:18:26,824 - logger - Thread-2 - INFO - input data: {'index': '692', 'date': '2016-07-05'}
+2016-07-08 21:18:26,829 - logger - Thread-2 - INFO - excel path: C:\Users\lyle9\Desktop\金融市场反应.xlsx, write location(C, 7) and value is: 692
+2016-07-08 21:18:27,032 - logger - Thread-2 - INFO - excel path: C:\Users\lyle9\Desktop\金融市场反应.xlsx, write location(D, 7) and value is: 2016-07-05
+2016-07-08 21:18:27,226 - logger - Thread-2 - INFO - input data: {'index': '694', 'date': '2016-07-06'}
+2016-07-08 21:18:27,265 - logger - Thread-2 - INFO - excel path: C:\Users\lyle9\Desktop\金融市场反应.xlsx, write location(C, 9) and value is: 694
+2016-07-08 21:18:27,456 - logger - Thread-2 - INFO - excel path: C:\Users\lyle9\Desktop\金融市场反应.xlsx, write location(D, 9) and value is: 2016-07-06
+2016-07-08 21:18:27,642 - logger - Thread-2 - INFO - input data: {'index': '699', 'date': '2016-07-07'}
+2016-07-08 21:18:27,644 - logger - Thread-2 - INFO - excel path: C:\Users\lyle9\Desktop\金融市场反应.xlsx, write location(C, 11) and value is: 699
+2016-07-08 21:18:27,852 - logger - Thread-2 - INFO - excel path: C:\Users\lyle9\Desktop\金融市场反应.xlsx, write location(D, 11) and value is: 2016-07-07
+2016-07-08 21:18:28,071 - logger - Thread-2 - INFO - excel path: C:\Users\lyle9\Desktop\金融市场反应.xlsx, write location(C, 2) and value is: 660
+2016-07-08 21:18:28,251 - logger - Thread-2 - INFO - excel path: C:\Users\lyle9\Desktop\金融市场反应.xlsx, write location(D, 2) and value is: 2016-06-30
+2016-07-08 21:18:32,404 - logger - Thread-2 - INFO - excel path: C:\Users\lyle9\Desktop\金融市场反应.xlsx, write location(C, 3) and value is: 95.7824
+2016-07-08 21:18:32,616 - logger - Thread-2 - INFO - excel path: C:\Users\lyle9\Desktop\金融市场反应.xlsx, write location(C, 2) and value is: 96.6990
+2016-07-08 21:18:32,811 - logger - Thread-2 - INFO - excel path: C:\Users\lyle9\Desktop\金融市场反应.xlsx, write location(C, 4) and value is: 96.2608
+2016-07-08 21:18:33,006 - logger - Thread-2 - INFO - excel path: C:\Users\lyle9\Desktop\金融市场反应.xlsx, write location(C, 6) and value is: 1.10611
+2016-07-08 21:18:33,210 - logger - Thread-2 - INFO - excel path: C:\Users\lyle9\Desktop\金融市场反应.xlsx, write location(C, 10) and value is: 1.29136
+2016-07-08 21:18:33,406 - logger - Thread-2 - INFO - excel path: C:\Users\lyle9\Desktop\金融市场反应.xlsx, write location(C, 8) and value is: 100.73
+2016-07-08 21:18:45,872 - logger - Thread-1 - INFO - current add extension: D:\workplace\crawl2excel\sinaExcel\Firefox\41\extensions\firefinder_for_firebug-1.4-fx.xpi
+2016-07-08 21:18:46,310 - logger - Thread-1 - INFO - current add extension: D:\workplace\crawl2excel\sinaExcel\Firefox\41\extensions\hulk.xpi
+2016-07-08 21:18:48,126 - logger - Thread-1 - INFO - current add extension: D:\workplace\crawl2excel\sinaExcel\Firefox\41\extensions\netExport-0.9b6.xpi
+2016-07-08 21:18:48,986 - logger - Thread-1 - INFO - current add extension: D:\workplace\crawl2excel\sinaExcel\Firefox\41\extensions\selenium-ide.xpi
+2016-07-08 21:18:56,990 - logger - Thread-1 - INFO - current add extension: D:\workplace\crawl2excel\sinaExcel\Firefox\41\extensions\xpather.xpi
+2016-07-08 21:18:57,088 - logger - Thread-1 - INFO - Initialize web browser...
+2016-07-08 21:19:34,036 - logger - Thread-1 - INFO - Open URL: http://finance.sina.com.cn/money/forex/hq/DINIW.shtml
+2016-07-08 21:20:12,778 - logger - Thread-1 - INFO - canvas is present: True
+2016-07-08 21:20:14,007 - logger - Thread-1 - INFO - excel path: C:\Users\lyle9\Desktop\金融市场反应.xlsx, write location(C, 2) and value is: 96.3349
+2016-07-08 21:20:14,203 - logger - Thread-1 - INFO - excel path: C:\Users\lyle9\Desktop\金融市场反应.xlsx, write location(C, 3) and value is: 95.9252
+2016-07-08 21:20:14,413 - logger - Thread-1 - INFO - excel path: C:\Users\lyle9\Desktop\金融市场反应.xlsx, write location(C, 4) and value is: 96.2557
+2016-07-08 21:20:14,611 - logger - Thread-1 - INFO - excel path: C:\Users\lyle9\Desktop\金融市场反应.xlsx, write location(C, 5) and value is: 0.15%
+2016-07-08 21:20:14,828 - logger - Thread-1 - INFO - Open URL: http://finance.sina.com.cn/money/forex/hq/EURUSD.shtml
+2016-07-08 21:20:27,589 - logger - Thread-1 - INFO - excel path: C:\Users\lyle9\Desktop\金融市场反应.xlsx, write location(C, 6) and value is: 1.1060
+2016-07-08 21:20:27,791 - logger - Thread-1 - INFO - excel path: C:\Users\lyle9\Desktop\金融市场反应.xlsx, write location(C, 7) and value is: -0.31%
+2016-07-08 21:20:28,029 - logger - Thread-1 - INFO - Open URL: http://finance.sina.com.cn/money/forex/hq/USDJPY.shtml
+2016-07-08 21:20:46,638 - logger - Thread-1 - INFO - excel path: C:\Users\lyle9\Desktop\金融市场反应.xlsx, write location(C, 8) and value is: 100.6830
+2016-07-08 21:20:46,833 - logger - Thread-1 - INFO - excel path: C:\Users\lyle9\Desktop\金融市场反应.xlsx, write location(C, 9) and value is: -0.44%
+2016-07-08 21:20:47,043 - logger - Thread-1 - INFO - Open URL: http://finance.sina.com.cn/money/forex/hq/GBPUSD.shtml
+2016-07-08 21:20:55,869 - logger - Thread-1 - INFO - excel path: C:\Users\lyle9\Desktop\金融市场反应.xlsx, write location(C, 10) and value is: 1.2885
+2016-07-08 21:20:56,068 - logger - Thread-1 - INFO - excel path: C:\Users\lyle9\Desktop\金融市场反应.xlsx, write location(C, 11) and value is: -0.08%
+2016-07-08 21:20:56,272 - logger - Thread-1 - INFO - Open URL: http://stock.finance.sina.com.cn/usstock/quotes/.INX.html
+2016-07-08 21:21:17,093 - logger - Thread-1 - INFO - canvas found: True
+2016-07-08 21:21:18,705 - logger - Thread-1 - INFO - closed Value: 2097.90(0.00%)
+2016-07-08 21:21:18,706 - logger - Thread-1 - INFO - excel path: C:\Users\lyle9\Desktop\金融市场反应.xlsx, write location(C, 13) and value is: 2097.90
+2016-07-08 21:21:18,956 - logger - Thread-1 - INFO - excel path: C:\Users\lyle9\Desktop\金融市场反应.xlsx, write location(C, 14) and value is: 0.00%
+2016-07-08 21:21:19,196 - logger - Thread-1 - INFO - Open URL: http://stock.finance.sina.com.cn/usstock/quotes/.DJI.html
+2016-07-08 21:21:30,034 - logger - Thread-1 - INFO - canvas found: True
+2016-07-08 21:21:30,526 - logger - Thread-1 - INFO - closed Value: 17895.88(0.00%)
+2016-07-08 21:21:30,527 - logger - Thread-1 - INFO - excel path: C:\Users\lyle9\Desktop\金融市场反应.xlsx, write location(C, 15) and value is: 17895.88
+2016-07-08 21:21:30,726 - logger - Thread-1 - INFO - excel path: C:\Users\lyle9\Desktop\金融市场反应.xlsx, write location(C, 16) and value is: 0.00%
+2016-07-08 21:21:30,948 - logger - Thread-1 - INFO - Open URL: http://stock.sina.com.cn/usstock/quotes/.IXIC.html
+2016-07-08 21:21:39,775 - logger - Thread-1 - INFO - canvas found: True
+2016-07-08 21:21:40,176 - logger - Thread-1 - INFO - closed Value: 4876.81(0.00%)
+2016-07-08 21:21:40,176 - logger - Thread-1 - INFO - excel path: C:\Users\lyle9\Desktop\金融市场反应.xlsx, write location(C, 17) and value is: 4876.81
+2016-07-08 21:21:40,382 - logger - Thread-1 - INFO - excel path: C:\Users\lyle9\Desktop\金融市场反应.xlsx, write location(C, 18) and value is: 0.00%
+2016-07-08 21:23:46,962 - logger - MainThread - INFO - copy file to desktop...
+2016-07-08 21:23:46,963 - logger - MainThread - INFO - D:\workplace\crawl2excel\sinaExcel
+2016-07-08 21:23:47,118 - logger - MainThread - INFO - Get info from URL:http://caodan.org/page/587
+2016-07-08 21:23:47,494 - logger - MainThread - INFO - get joke....
+2016-07-08 21:23:49,480 - logger - Thread-1 - INFO - Get URL: http://www.cnss.com.cn/caches/task/exponent/bdi/month.json?v=146798422947924.94
+2016-07-08 21:23:49,685 - logger - Thread-1 - INFO - data_month: [{'index': '610', 'date': '2016-06-08'}, {'index': '611', 'date': '2016-06-09'}, {'index': '610', 'date': '2016-06-10'}, {'index': '609', 'date': '2016-06-13'}, {'index': '608', 'date': '2016-06-14'}, {'index': '604', 'date': '2016-06-15'}, {'index': '598', 'date': '2016-06-16'}, {'index': '587', 'date': '2016-06-17'}, {'index': '582', 'date': '2016-06-20'}, {'index': '580', 'date': '2016-06-21'}, {'index': '585', 'date': '2016-06-22'}, {'index': '596', 'date': '2016-06-23'}, {'index': '609', 'date': '2016-06-24'}, {'index': '616', 'date': '2016-06-27'}, {'index': '627', 'date': '2016-06-28'}, {'index': '640', 'date': '2016-06-29'}, {'index': '660', 'date': '2016-06-30'}, {'index': '677', 'date': '2016-07-01'}, {'index': '688', 'date': '2016-07-04'}, {'index': '692', 'date': '2016-07-05'}, {'index': '694', 'date': '2016-07-06'}, {'index': '699', 'date': '2016-07-07'}]
+2016-07-08 21:23:49,688 - logger - Thread-1 - INFO - input data: {'index': '677', 'date': '2016-07-01'}
+2016-07-08 21:23:49,688 - logger - Thread-1 - INFO - excel path: C:\Users\lyle9\Desktop\金融市场反应.xlsx, write location(C, 3) and value is: 677
+2016-07-08 21:23:49,874 - logger - Thread-1 - INFO - excel path: C:\Users\lyle9\Desktop\金融市场反应.xlsx, write location(D, 3) and value is: 2016-07-01
+2016-07-08 21:23:50,112 - logger - Thread-1 - INFO - input data: {'index': '688', 'date': '2016-07-04'}
+2016-07-08 21:23:50,113 - logger - Thread-1 - INFO - excel path: C:\Users\lyle9\Desktop\金融市场反应.xlsx, write location(C, 5) and value is: 688
+2016-07-08 21:23:50,308 - logger - Thread-1 - INFO - excel path: C:\Users\lyle9\Desktop\金融市场反应.xlsx, write location(D, 5) and value is: 2016-07-04
+2016-07-08 21:23:50,495 - logger - Thread-1 - INFO - input data: {'index': '692', 'date': '2016-07-05'}
+2016-07-08 21:23:50,495 - logger - Thread-1 - INFO - excel path: C:\Users\lyle9\Desktop\金融市场反应.xlsx, write location(C, 7) and value is: 692
+2016-07-08 21:23:50,680 - logger - Thread-1 - INFO - excel path: C:\Users\lyle9\Desktop\金融市场反应.xlsx, write location(D, 7) and value is: 2016-07-05
+2016-07-08 21:23:50,868 - logger - Thread-1 - INFO - input data: {'index': '694', 'date': '2016-07-06'}
+2016-07-08 21:23:50,868 - logger - Thread-1 - INFO - excel path: C:\Users\lyle9\Desktop\金融市场反应.xlsx, write location(C, 9) and value is: 694
+2016-07-08 21:23:51,051 - logger - Thread-1 - INFO - excel path: C:\Users\lyle9\Desktop\金融市场反应.xlsx, write location(D, 9) and value is: 2016-07-06
+2016-07-08 21:23:51,242 - logger - Thread-1 - INFO - input data: {'index': '699', 'date': '2016-07-07'}
+2016-07-08 21:23:51,243 - logger - Thread-1 - INFO - excel path: C:\Users\lyle9\Desktop\金融市场反应.xlsx, write location(C, 11) and value is: 699
+2016-07-08 21:23:51,442 - logger - Thread-1 - INFO - excel path: C:\Users\lyle9\Desktop\金融市场反应.xlsx, write location(D, 11) and value is: 2016-07-07
+2016-07-08 21:23:51,627 - logger - Thread-1 - INFO - excel path: C:\Users\lyle9\Desktop\金融市场反应.xlsx, write location(C, 2) and value is: 660
+2016-07-08 21:23:51,849 - logger - Thread-1 - INFO - excel path: C:\Users\lyle9\Desktop\金融市场反应.xlsx, write location(D, 2) and value is: 2016-06-30
+2016-07-08 21:23:53,233 - logger - Thread-1 - INFO - excel path: C:\Users\lyle9\Desktop\金融市场反应.xlsx, write location(C, 3) and value is: 95.7824
+2016-07-08 21:23:53,426 - logger - Thread-1 - INFO - excel path: C:\Users\lyle9\Desktop\金融市场反应.xlsx, write location(C, 2) and value is: 96.6990
+2016-07-08 21:23:53,613 - logger - Thread-1 - INFO - excel path: C:\Users\lyle9\Desktop\金融市场反应.xlsx, write location(C, 4) and value is: 96.2608
+2016-07-08 21:23:53,799 - logger - Thread-1 - INFO - excel path: C:\Users\lyle9\Desktop\金融市场反应.xlsx, write location(C, 6) and value is: 1.10611
+2016-07-08 21:23:53,989 - logger - Thread-1 - INFO - excel path: C:\Users\lyle9\Desktop\金融市场反应.xlsx, write location(C, 10) and value is: 1.29136
+2016-07-08 21:23:54,177 - logger - Thread-1 - INFO - excel path: C:\Users\lyle9\Desktop\金融市场反应.xlsx, write location(C, 8) and value is: 100.73
+2016-07-08 21:23:59,535 - logger - Thread-2 - INFO - root path: D:\workplace\crawl2excel\sinaExcel
+2016-07-08 21:23:59,766 - logger - Thread-2 - INFO - current add extension: D:\workplace\crawl2excel\sinaExcel\Firefox\41\extensions\firebug-2.0.13-fx.xpi
+2016-07-08 21:24:16,590 - logger - Thread-2 - INFO - current add extension: D:\workplace\crawl2excel\sinaExcel\Firefox\41\extensions\firefinder_for_firebug-1.4-fx.xpi
+2016-07-08 21:24:17,034 - logger - Thread-2 - INFO - current add extension: D:\workplace\crawl2excel\sinaExcel\Firefox\41\extensions\hulk.xpi
+2016-07-08 21:24:18,216 - logger - Thread-2 - INFO - current add extension: D:\workplace\crawl2excel\sinaExcel\Firefox\41\extensions\netExport-0.9b6.xpi
+2016-07-08 21:24:18,882 - logger - Thread-2 - INFO - current add extension: D:\workplace\crawl2excel\sinaExcel\Firefox\41\extensions\selenium-ide.xpi
+2016-07-08 21:24:25,216 - logger - Thread-2 - INFO - current add extension: D:\workplace\crawl2excel\sinaExcel\Firefox\41\extensions\xpather.xpi
+2016-07-08 21:24:25,258 - logger - Thread-2 - INFO - Initialize web browser...
+2016-07-08 21:24:42,382 - logger - Thread-2 - INFO - Open URL: http://finance.sina.com.cn/money/forex/hq/DINIW.shtml
+2016-07-08 21:24:55,305 - logger - Thread-2 - INFO - canvas is present: True
+2016-07-08 21:24:55,949 - logger - Thread-2 - INFO - excel path: C:\Users\lyle9\Desktop\金融市场反应.xlsx, write location(C, 2) and value is: 96.3349
+2016-07-08 21:24:56,167 - logger - Thread-2 - INFO - excel path: C:\Users\lyle9\Desktop\金融市场反应.xlsx, write location(C, 3) and value is: 95.9252
+2016-07-08 21:24:56,372 - logger - Thread-2 - INFO - excel path: C:\Users\lyle9\Desktop\金融市场反应.xlsx, write location(C, 4) and value is: 96.2557
+2016-07-08 21:24:56,579 - logger - Thread-2 - INFO - excel path: C:\Users\lyle9\Desktop\金融市场反应.xlsx, write location(C, 5) and value is: 0.15%
+2016-07-08 21:24:56,774 - logger - Thread-2 - INFO - Open URL: http://finance.sina.com.cn/money/forex/hq/EURUSD.shtml
+2016-07-08 21:25:16,066 - logger - Thread-2 - INFO - excel path: C:\Users\lyle9\Desktop\金融市场反应.xlsx, write location(C, 6) and value is: 1.1060
+2016-07-08 21:25:16,269 - logger - Thread-2 - INFO - excel path: C:\Users\lyle9\Desktop\金融市场反应.xlsx, write location(C, 7) and value is: -0.31%
+2016-07-08 21:25:16,472 - logger - Thread-2 - INFO - Open URL: http://finance.sina.com.cn/money/forex/hq/USDJPY.shtml
+2016-07-08 21:25:28,460 - logger - Thread-2 - INFO - excel path: C:\Users\lyle9\Desktop\金融市场反应.xlsx, write location(C, 8) and value is: 100.6830
+2016-07-08 21:25:28,689 - logger - Thread-2 - INFO - excel path: C:\Users\lyle9\Desktop\金融市场反应.xlsx, write location(C, 9) and value is: -0.44%
+2016-07-08 21:25:28,893 - logger - Thread-2 - INFO - Open URL: http://finance.sina.com.cn/money/forex/hq/GBPUSD.shtml
+2016-07-08 21:27:01,375 - logger - Thread-3 - INFO - root path: D:\workplace\crawl2excel\sinaExcel
+2016-07-08 21:27:01,609 - logger - Thread-3 - INFO - current add extension: D:\workplace\crawl2excel\sinaExcel\Firefox\41\extensions\firebug-2.0.13-fx.xpi
+2016-07-08 21:27:17,264 - logger - Thread-3 - INFO - current add extension: D:\workplace\crawl2excel\sinaExcel\Firefox\41\extensions\firefinder_for_firebug-1.4-fx.xpi
+2016-07-08 21:27:17,609 - logger - Thread-3 - INFO - current add extension: D:\workplace\crawl2excel\sinaExcel\Firefox\41\extensions\hulk.xpi
+2016-07-08 21:27:18,876 - logger - Thread-3 - INFO - current add extension: D:\workplace\crawl2excel\sinaExcel\Firefox\41\extensions\netExport-0.9b6.xpi
+2016-07-08 21:27:19,568 - logger - Thread-3 - INFO - current add extension: D:\workplace\crawl2excel\sinaExcel\Firefox\41\extensions\selenium-ide.xpi
+2016-07-08 21:27:25,717 - logger - Thread-3 - INFO - current add extension: D:\workplace\crawl2excel\sinaExcel\Firefox\41\extensions\xpather.xpi
+2016-07-08 21:27:25,765 - logger - Thread-3 - INFO - Initialize web browser...
