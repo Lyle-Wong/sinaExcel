@@ -112,6 +112,7 @@ class CrawlUI:
         self.american_stock(settings.dji_url, 15)
         self.american_stock(settings.ixic_url, 17)
         self.american_debt(settings.american_debt)
+        self.browser.quit()
 
 
 if __name__ == '__main__':
