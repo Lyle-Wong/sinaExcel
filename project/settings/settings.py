@@ -94,5 +94,11 @@ stock_daily_k_Xpath = "//div[@class='kke_menus_tab_edage']//div[@data-view='kd']
 stock_closed_XPath = "//table/tbody/tr[5]/td/span"
 
 
+#美国国债
+american_debt = "https://www.treasury.gov/resource-center/data-chart-center/interest-rates/Pages/TextView.aspx?data=yield"
+
+american_debt_yesterday_xpath = "//table[@class='t-chart']/tbody/tr[5]/td"
+american_debt_before_xpath = "//table[@class='t-chart']/tbody/tr[4]/td"
+
 # 每一页下载等待时间
 wait_sec = 1

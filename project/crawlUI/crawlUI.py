@@ -89,6 +89,20 @@ class CrawlUI:
         excelUtil.excel_write(settings.excel_file_path, settings.excel_first_sheet,
                               "C", str(basePosition + 1), closed_value.split('(')[1].split(')')[0])
 
+    def american_debt(self, url):
+        self.browser.get(url)
+        valueYesterdayElements = self.browser.find_elements_by_xpath(
+            settings.american_debt_yesterday_xpath)
+        valueBeforeElements = self.browser.find_elements_by_xpath(
+            settings.american_debt_before_xpath)
+        yesterdayValues = [i.text for i in valueYesterdayElements][7:]
+        beforeValues = [i.text for i in valueBeforeElements][7:]
+        for i in range(len(yesterdayValues)):
+            excelUtil.excel_write(settings.excel_file_path,
+                                  settings.excel_first_sheet, "C", str(2 * i + 29), yesterdayValues[i])
+            excelUtil.excel_write(settings.excel_file_path, settings.excel_first_sheet, "C", str(
+                2 * i + 30), format((float(yesterdayValues[i]) - float(beforeValues[i])) / float(yesterdayValues[i]), '.2%'))
+
     def ex_rate(self):
         self.get_diniw(settings.dollar_index_url)
         self.ex_sub_rate(settings.eurusd_url, 6)
@@ -97,6 +111,7 @@ class CrawlUI:
         self.american_stock(settings.inx_url, 13)
         self.american_stock(settings.dji_url, 15)
         self.american_stock(settings.ixic_url, 17)
+        self.american_debt(settings.american_debt)
 
 
 if __name__ == '__main__':
