@@ -39,7 +39,7 @@ class CrawlApplication(object):
     def API_func(self):
         crawl = crawlAPI.Crawl()
         crawl.bdi()
-        crawl.ex_rate_input()
+        # crawl.ex_rate_input()
 
     def new_thread1(self):
         t = threading.Thread(target=self.API_func)

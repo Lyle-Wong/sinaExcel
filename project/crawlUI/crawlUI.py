@@ -105,20 +105,23 @@ class CrawlUI:
 
     def europe_stock(self, url):
         self.browser.get(url)
-        value = self.browser.find_element_by_xpath(settings.dax_xpath_value)
-        rate = self.browser.find_element_by_xpath(settings.dax_xpath_rate)
+        value = self.browser.find_element_by_xpath(
+            settings.dax_xpath_value).text
+        rate = self.browser.find_element_by_xpath(settings.dax_xpath_rate).text
         excelUtil.excel_write(settings.excel_file_path,
                               settings.excel_first_sheet, "C", "22", value)
         excelUtil.excel_write(settings.excel_file_path,
                               settings.excel_first_sheet, "C", "23", rate)
-        value = self.browser.find_element_by_xpath(settings.cac_xpath_value)
-        rate = self.browser.find_element_by_xpath(settings.cac_xpath_rate)
+        value = self.browser.find_element_by_xpath(
+            settings.cac_xpath_value).text
+        rate = self.browser.find_element_by_xpath(settings.cac_xpath_rate).text
         excelUtil.excel_write(settings.excel_file_path,
                               settings.excel_first_sheet, "C", "24", value)
         excelUtil.excel_write(settings.excel_file_path,
                               settings.excel_first_sheet, "C", "25", rate)
-        value = self.browser.find_element_by_xpath(settings.ukx_xpath_value)
-        rate = self.browser.find_element_by_xpath(settings.ukx_xpath_rate)
+        value = self.browser.find_element_by_xpath(
+            settings.ukx_xpath_value).text
+        rate = self.browser.find_element_by_xpath(settings.ukx_xpath_rate).text
         excelUtil.excel_write(settings.excel_file_path,
                               settings.excel_first_sheet, "C", "26", value)
         excelUtil.excel_write(settings.excel_file_path,
