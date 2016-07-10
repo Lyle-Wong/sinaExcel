@@ -59,7 +59,7 @@ class CrawlApplication(object):
                                  command=self.new_thread1,
                                  width=30,
                                  height=2,
-                                 text="通过 API 爬取",
+                                 text="通过 API 爬取数据",
                                  font=helv36
                                  )
         tk.Label(self.root).pack(padx=20, side='top')
@@ -67,7 +67,7 @@ class CrawlApplication(object):
                                  command=self.new_thread2,
                                  width=30,
                                  height=2,
-                                 text="通过 UI 爬取",
+                                 text="通过 UI 爬取数据",
                                  font=helv36
                                  )
         self.btnSer1.pack(padx=20, side='top')
