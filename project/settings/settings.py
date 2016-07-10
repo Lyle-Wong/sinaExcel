@@ -44,6 +44,8 @@ excel_file_path = os.path.join(desktop_path, excel_name)
 
 excel_first_sheet = "（美联储）"
 
+excel_second_sheet = "（欧央行）"
+
 
 # 波罗的海
 index_bdi = "（波罗的海）"
@@ -66,6 +68,12 @@ sgbpusd_url = "http://hq.sinajs.cn/rn=" + \
 susdjpy_url = "http://hq.sinajs.cn/rn=" + \
     str(int(time.time() * 1000)) + "list=fx_susdjpy"
 
+# 欧元英镑
+eurrgbp_url = "http://finance.sina.com.cn/money/forex/hq/EURUSD.shtml"
+# 欧元瑞士
+eurchf_url = "http://finance.sina.com.cn/money/forex/hq/EURCHF.shtml"
+# 欧元日元
+eurjpy_url = "http://finance.sina.com.cn/money/forex/hq/EURJPY.shtml"
 
 canvas_Xpath = "//div[contains(@id, 'mainarea')]"
 
@@ -98,15 +106,19 @@ europe_stock = "http://quote.eastmoney.com/center/europe.html#europe_3"
 dax_xpath_value = "//table[@class='data-table']/tbody/tr[3]/td[8]/span"
 dax_xpath_rate = "//table[@class='data-table']/tbody/tr[3]/td[9]/span"
 cac_xpath_value = "//table[@class='data-table']/tbody/tr[4]/td[8]/span"
-cac_xpath_rate = "//table[@class='data-table']/tbody/tr[4]/td[8]/span"
+cac_xpath_rate = "//table[@class='data-table']/tbody/tr[4]/td[9]/span"
 ukx_xpath_value = "//table[@class='data-table']/tbody/tr[2]/td[8]/span"
-ukx_xpath_rate = "//table[@class='data-table']/tbody/tr[2]/td[8]/span"
+ukx_xpath_rate = "//table[@class='data-table']/tbody/tr[2]/td[9]/span"
 
 # 美国国债
 american_debt = "https://www.treasury.gov/resource-center/data-chart-center/interest-rates/Pages/TextView.aspx?data=yield"
 
 american_debt_yesterday_xpath = "//table[@class='t-chart']/tbody/tr[5]/td"
 american_debt_before_xpath = "//table[@class='t-chart']/tbody/tr[4]/td"
+
+# 美国西德克萨斯
+commodity_xpath = "//div[@data-id='KKE_tab_kd']//a"
+wti_url = "http://stock.finance.sina.com.cn/usstock/quotes/WTI.html"
 
 # 每一页下载等待时间
 wait_sec = 1

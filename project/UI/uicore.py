@@ -34,7 +34,10 @@ class CrawlApplication(object):
 
     def UI_func(self):
         crawl = crawlUI.CrawlUI()
-        crawl.ex_rate()
+        try:
+            crawl.ex_rate()
+        except Exception as ex:
+            logger.exception(ex)
 
     def API_func(self):
         crawl = crawlAPI.Crawl()
