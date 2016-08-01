@@ -9,7 +9,6 @@ import os
 import sys
 import time
 
-
 headers_xhr = {
     "Accept-Encoding": "gzip",
     "Cache-Control": "max-age=0",
@@ -40,7 +39,9 @@ root_path = os.getcwd()
 
 excel_name = "金融市场反应.xlsx"
 
-excel_file_path = os.path.join(desktop_path, excel_name)
+excel_new_name = "金融市场反应 "+ time.strftime('%Y-%m-%d') +".xlsx"
+
+excel_file_path = os.path.join(desktop_path, excel_new_name)
 
 excel_first_sheet = "（美联储）"
 

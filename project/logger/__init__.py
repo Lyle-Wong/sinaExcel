@@ -41,17 +41,17 @@ class MyLogger(object):
 
         # create a logging format
 
-        handlerStream = logging.StreamHandler()
-        handlerStream.setLevel(logging.INFO)
+        # handlerStream = logging.StreamHandler()
+        # handlerStream.setLevel(logging.INFO)
 
         formatter = logging.Formatter('%(asctime)s - %(name)s - %(threadName)s - %(levelname)s - %(message)s')
         handler.setFormatter(formatter)
-        handlerStream.setFormatter(formatter)
+        # handlerStream.setFormatter(formatter)
 
         # add the handlers to the logger
 
         logger.addHandler(handler)
-        logger.addHandler(handlerStream)
+        # logger.addHandler(handlerStream)
         return logger
 
 logger = MyLogger().setup_logging()

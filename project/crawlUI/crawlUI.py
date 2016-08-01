@@ -120,7 +120,7 @@ class CrawlUI:
             excelUtil.excel_write(settings.excel_file_path,
                                   settings.excel_first_sheet, "C", str(2 * i + 29), yesterdayValues[i])
             excelUtil.excel_write(settings.excel_file_path, settings.excel_first_sheet, "C", str(
-                2 * i + 30), format((float(yesterdayValues[i]) - float(beforeValues[i])) / float(yesterdayValues[i]), '.2%'))
+                2 * i + 30), format((float(yesterdayValues[i]) - float(beforeValues[i])) / float(yesterdayValues[i]), '.3%'))
 
     def europe_stock(self, url):
         self.browser.get(url)
