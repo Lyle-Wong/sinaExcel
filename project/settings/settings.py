@@ -9,7 +9,6 @@ import os
 import sys
 import time
 
-
 headers_xhr = {
     "Accept-Encoding": "gzip",
     "Cache-Control": "max-age=0",
@@ -40,7 +39,9 @@ root_path = os.getcwd()
 
 excel_name = "金融市场反应.xlsx"
 
-excel_file_path = os.path.join(desktop_path, excel_name)
+excel_new_name = "金融市场反应 " + time.strftime('%Y-%m-%d') + ".xlsx"
+
+excel_file_path = os.path.join(desktop_path, excel_new_name)
 
 excel_first_sheet = "（美联储）"
 
@@ -89,6 +90,7 @@ daily_k_Xpath = "//div[@class='hqH5_nav']//li[@data-action='kd']"
 highest_XPath = ".//*[@id='hqH5_content']//table/tbody/tr[3]/td/span"
 lowest_XPath = ".//*[@id='hqH5_content']//table/tbody/tr[4]/td/span"
 closed_XPath = ".//*[@id='hqH5_content']//table/tbody/tr[5]/td/span"
+date_Xpath = ".//*[@id='hqH5_content']//table/tbody/tr[1]/th/span"
 
 # 标普500
 inx_url = "http://stock.finance.sina.com.cn/usstock/quotes/.INX.html"
@@ -120,5 +122,18 @@ american_debt_before_xpath = "//table[@class='t-chart']/tbody/tr[4]/td"
 commodity_xpath = "//div[@data-id='KKE_tab_kd']//a"
 wti_url = "http://stock.finance.sina.com.cn/usstock/quotes/WTI.html"
 
+# 债券市场
+italy_10_year_bond_yield = "http://www.investing.com/rates-bonds/italy-10-year-bond-yield-historical-data"
+spain_10_year_bond_yield = "http://www.investing.com/rates-bonds/spain-10-year-bond-yield-historical-data"
+portugal_10_year_bond_yield = "http://www.investing.com/rates-bonds/portugal-10-year-bond-yield-historical-data"
+germany_10_year_bond_yield = "http://www.investing.com/rates-bonds/germany-10-year-bond-yield-historical-data"
+france_10_year_bond_yield = "http://www.investing.com/rates-bonds/france-10-year-bond-yield-historical-data"
+
+fuck_iframe = "//div[@id='mainPopUpContainer']/span"
+
+historical_data_position = "//a[text()='Historical Data']"
+close_date = "//table[@id='curr_table']//tr[2]/td[1]"
+close_price = "//table[@id='curr_table']//tr[2]/td[2]"
+close_change = "//table[@id='curr_table']//tr[2]/td[6]"
 # 每一页下载等待时间
 wait_sec = 1

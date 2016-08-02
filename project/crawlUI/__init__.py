@@ -27,7 +27,7 @@ def setup():
     # extensionList = [os.path.join(os.path.join(rootPath, r'Firefox\41\extensions'), extension) for extension in os.listdir(os.path.join(
     #     rootPath, r'Firefox\41\extensions'))]
     # for extension in extensionList:
-    #     logger.info("current add extension: %s", extension)
+    #     logger.info("current add extension: %s", extension.split('\\')[-1])
     #     profile.add_extension(extension=extension)
     # profile.set_preference("extensions.firebug.currentVersion", "2.0.13")
     logger.info("Initialize web browser...")
