@@ -179,6 +179,26 @@ class CrawlUI:
         excelUtil.excel_write(settings.excel_file_path, settings.excel_first_sheet,
                               "C", str(basePosition + 1), closed_value.split('(')[1].split(')')[0])
 
+    #债券市场
+    def debet_market(self, url, basePosition):
+        self.action = ActionChains(self.browser)
+        logger.info("Open URL: %s", url)
+        self.browser.get(url)
+        # iframe = self.browser.find_element_by_xpath(settings.fuck_iframe)
+        # if iframe.is_displayed():
+        #     logger.info("Fuck iframe present, try to close it")
+        #     self.action.click(iframe).perform()
+        # historical_data_element = self.browser.find_element_by_xpath(settings.historical_data_position)
+        # logger.info("try to click historical data link: %s", historical_data_element.is_displayed())
+        # self.action.click(historical_data_element).perform()
+        closed_value = self.browser.find_element_by_xpath(settings.close_price).text
+        logger.info("%s", closed_value)
+        change_rate = self.browser.find_element_by_xpath(settings.close_change).text
+        logger.info("Get data: %s", self.browser.find_element_by_xpath(settings.close_date).text)
+        excelUtil.excel_write(settings.excel_file_path, settings.excel_second_sheet, "C", str(basePosition), closed_value)
+        excelUtil.excel_write(settings.excel_file_path, settings.excel_second_sheet, "C", str(basePosition+1), change_rate)
+
+
     def ex_rate(self):
         self.get_diniw(settings.dollar_index_url)
         self.ex_sub_rate(settings.eurusd_url, 6)
@@ -194,6 +214,11 @@ class CrawlUI:
         self.commodity_price(settings.wti_url, 40)
         self.europe_stock(settings.europe_stock)
         self.american_debt(settings.american_debt)
+        self.debet_market(settings.italy_10_year_bond_yield, 20)
+        self.debet_market(settings.spain_10_year_bond_yield, 22)
+        self.debet_market(settings.portugal_10_year_bond_yield, 24)
+        self.debet_market(settings.germany_10_year_bond_yield, 26)
+        self.debet_market(settings.france_10_year_bond_yield, 28)
         self.browser.quit()
 
 

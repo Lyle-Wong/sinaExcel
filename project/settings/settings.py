@@ -121,5 +121,18 @@ american_debt_before_xpath = "//table[@class='t-chart']/tbody/tr[4]/td"
 commodity_xpath = "//div[@data-id='KKE_tab_kd']//a"
 wti_url = "http://stock.finance.sina.com.cn/usstock/quotes/WTI.html"
 
+#债券市场
+italy_10_year_bond_yield = "http://www.investing.com/rates-bonds/italy-10-year-bond-yield-historical-data"
+spain_10_year_bond_yield = "http://www.investing.com/rates-bonds/spain-10-year-bond-yield-historical-data"
+portugal_10_year_bond_yield = "http://www.investing.com/rates-bonds/portugal-10-year-bond-yield-historical-data"
+germany_10_year_bond_yield = "http://www.investing.com/rates-bonds/germany-10-year-bond-yield-historical-data"
+france_10_year_bond_yield = "http://www.investing.com/rates-bonds/france-10-year-bond-yield-historical-data"
+
+fuck_iframe = "//div[@id='mainPopUpContainer']/span"
+
+historical_data_position = "//a[text()='Historical Data']"
+close_date = "//table[@id='curr_table']//tr[2]/td[1]"
+close_price = "//table[@id='curr_table']//tr[2]/td[2]"
+close_change = "//table[@id='curr_table']//tr[2]/td[6]"
 # 每一页下载等待时间
 wait_sec = 1
