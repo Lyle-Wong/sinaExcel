@@ -39,7 +39,7 @@ root_path = os.getcwd()
 
 excel_name = "金融市场反应.xlsx"
 
-excel_new_name = "金融市场反应 " + time.strftime('%Y-%m-%d') + ".xlsx"
+excel_new_name = "finical " + time.strftime('%Y-%m-%d') + ".xlsx"
 
 excel_file_path = os.path.join(desktop_path, excel_new_name)
 
@@ -101,7 +101,8 @@ dji_url = "http://stock.finance.sina.com.cn/usstock/quotes/.DJI.html"
 # 纳斯达克综合
 ixic_url = "http://stock.sina.com.cn/usstock/quotes/.IXIC.html"
 stock_daily_k_Xpath = "//div[@class='kke_menus_tab_edage']//div[@data-view='kd']/a"
-stock_closed_XPath = "//table/tbody/tr[5]/td/span"
+stock_closed_XPath = "//div[@id='h5Figure']//table/tbody/tr[5]/td/span"
+stock_date_Xpath = "//div[@id='h5Figure']//tbody/tr[1]/th/span"
 
 # 欧洲股市
 europe_stock = "http://quote.eastmoney.com/center/europe.html#europe_3"
@@ -115,8 +116,9 @@ ukx_xpath_rate = "//table[@class='data-table']/tbody/tr[2]/td[9]/span"
 # 美国国债
 american_debt = "https://www.treasury.gov/resource-center/data-chart-center/interest-rates/Pages/TextView.aspx?data=yield"
 
-american_debt_yesterday_xpath = "//table[@class='t-chart']/tbody/tr[5]/td"
-american_debt_before_xpath = "//table[@class='t-chart']/tbody/tr[4]/td"
+american_debt_current_row_number = "//table[@class='t-chart']/tbody/tr"
+american_debt_yesterday_xpath = "//table[@class='t-chart']/tbody/tr[placeholder]/td"
+american_debt_before_xpath = "//table[@class='t-chart']/tbody/tr[placeholder]/td"
 
 # 美国西德克萨斯
 commodity_xpath = "//div[@data-id='KKE_tab_kd']//a"

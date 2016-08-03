@@ -44,8 +44,8 @@ class CrawlUI:
             display_date = self.browser.find_element_by_xpath(
                 settings.date_Xpath).text
             result = TimeUtil.judge_display_date(display_date)
-            self.action.move_by_offset(-3, 0).perform()
-            width = width - 3
+            self.action.move_by_offset(-1, 0).perform()
+            width = width - 1
             logger.info(
                 "Move mouse by offset 1: current location: {0}, {1}".format(
                     width, int(height / 2)))
@@ -82,8 +82,8 @@ class CrawlUI:
             display_date = self.browser.find_element_by_xpath(
                 settings.date_Xpath).text
             result = TimeUtil.judge_display_date(display_date)
-            self.action.move_by_offset(-3, 0).perform()
-            width = width - 3
+            self.action.move_by_offset(-1, 0).perform()
+            width = width - 1
             logger.info(
                 "Move mouse by offset 1: current location: {0}, {1}".format(
                     width, int(height / 2)))
@@ -112,8 +112,8 @@ class CrawlUI:
             display_date = self.browser.find_element_by_xpath(
                 settings.date_Xpath).text
             result = TimeUtil.judge_display_date(display_date)
-            self.action.move_by_offset(-3, 0).perform()
-            width = width - 3
+            self.action.move_by_offset(-1, 0).perform()
+            width = width - 1
             logger.info(
                 "Move mouse by offset 1: current location: {0}, {1}".format(
                     width, int(height / 2)))
@@ -124,6 +124,7 @@ class CrawlUI:
         excelUtil.excel_write(settings.excel_file_path, settings.excel_second_sheet,
                               "C", str(basePosition + 1), closed_value.split('(')[1].split(')')[0])
 
+    #美国股市
     def american_stock(self, url, basePosition):
         self.action = ActionChains(self.browser)
         logger.info("Open URL: %s", url)
@@ -141,10 +142,10 @@ class CrawlUI:
         result = ''
         while result != 'yesterday' and result != 'beforeyesterday' and result != 'prebeforeyesterday':
             display_date = self.browser.find_element_by_xpath(
-                settings.date_Xpath).text
+                settings.stock_date_Xpath).text
             result = TimeUtil.judge_display_date(display_date)
-            self.action.move_by_offset(-3, 0).perform()
-            width = width - 3
+            self.action.move_by_offset(-1, 0).perform()
+            width = width - 1
             logger.info(
                 "Move mouse by offset 1: current location: {0}, {1}".format(
                     width, int(height / 2)))
@@ -156,20 +157,28 @@ class CrawlUI:
         excelUtil.excel_write(settings.excel_file_path, settings.excel_first_sheet,
                               "C", str(basePosition + 1), closed_value.split('(')[1].split(')')[0])
 
+    # 美国债券
     def american_debt(self, url):
         logger.info("Open URL: %s", url)
         self.browser.get(url)
-        valueYesterdayElements = self.browser.find_elements_by_xpath(
-            settings.american_debt_yesterday_xpath)
-        valueBeforeElements = self.browser.find_elements_by_xpath(
-            settings.american_debt_before_xpath)
-        yesterdayValues = [i.text for i in valueYesterdayElements][7:]
-        beforeValues = [i.text for i in valueBeforeElements][7:]
-        for i in range(len(yesterdayValues)):
-            excelUtil.excel_write(settings.excel_file_path,
-                                  settings.excel_first_sheet, "C", str(2 * i + 29), yesterdayValues[i])
-            excelUtil.excel_write(settings.excel_file_path, settings.excel_first_sheet, "C", str(
-                2 * i + 30), format((float(yesterdayValues[i]) - float(beforeValues[i])) / float(yesterdayValues[i]), '.3%'))
+        try:
+            row_number = self.browser.find_elements_by_xpath(settings.american_debt_current_row_number)
+            row_count = len(row_number)
+            logger.info("current has %d row data", row_count)
+            valueYesterdayElements = self.browser.find_elements_by_xpath(
+                settings.american_debt_yesterday_xpath.replace('placeholder', str(row_count)))
+            valueBeforeElements = self.browser.find_elements_by_xpath(
+                settings.american_debt_before_xpath.replace('placeholder', str(row_count-1)))
+            yesterdayValues = [i.text for i in valueYesterdayElements][7:]
+            beforeValues = [i.text for i in valueBeforeElements][7:]
+            for i in range(len(yesterdayValues)):
+                excelUtil.excel_write(settings.excel_file_path,
+                                      settings.excel_first_sheet, "C", str(2 * i + 29), yesterdayValues[i])
+                excelUtil.excel_write(settings.excel_file_path, settings.excel_first_sheet, "C", str(
+                    2 * i + 30), format((float(yesterdayValues[i]) - float(beforeValues[i])) / float(beforeValues[i]), '.3%'))
+        except Exception as ex:
+            logger.exception(ex)
+            logger.warn("*****WARN***** Get data fail, please open '%s' maunally", url)
 
     def europe_stock(self, url):
         self.browser.get(url)
@@ -225,16 +234,15 @@ class CrawlUI:
             daily_k_canvasElement, width, int(height / 2)).perform()
         while result != 'yesterday' and result != 'beforeyesterday' and result != 'prebeforeyesterday':
             display_date = self.browser.find_element_by_xpath(
-                settings.date_Xpath).text
+                settings.stock_date_Xpath).text
             result = TimeUtil.judge_display_date(display_date)
-            self.action.move_by_offset(-3, 0).perform()
-            width = width - 3
+            self.action.move_by_offset(-1, 0).perform()
+            width = width - 1
             logger.info(
                 "Move mouse by offset 1: current location: {0}, {1}".format(
                     width, int(height / 2)))
         closed_value = self.browser.find_element_by_xpath(
             settings.stock_closed_XPath).text
-        logger.info("closed Value: %s", closed_value)
         excelUtil.excel_write(settings.excel_file_path, settings.excel_first_sheet,
                               "C", str(basePosition), closed_value.split('(')[0])
         excelUtil.excel_write(settings.excel_file_path, settings.excel_first_sheet,
@@ -247,7 +255,6 @@ class CrawlUI:
         self.browser.get(url)
         closed_value = self.browser.find_element_by_xpath(
             settings.close_price).text
-        logger.info("%s", closed_value)
         change_rate = self.browser.find_element_by_xpath(
             settings.close_change).text
         logger.info("Get data: %s", self.browser.find_element_by_xpath(
