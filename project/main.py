@@ -15,7 +15,7 @@ from settings.settings import *
 
 if __name__ == '__main__':
     logger.info("copy file to desktop...")
-    logger.info("working dir: %s", os.getcwd())
+    logger.info("working dir: %s", os.path.join(os.getcwd(), excel_name))
     shutil.copy(os.getcwd() + "\\" + excel_name, excel_file_path)
     app = uicore.CrawlApplication()
     app.loop()
