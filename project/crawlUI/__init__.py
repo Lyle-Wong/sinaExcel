@@ -14,7 +14,6 @@ from settings import settings
 
 def setup():
     rootPath = settings.root_path
-    logger.info("root path: %s", settings.root_path)
     firefoxBin = FirefoxBinary(os.path.join(
         rootPath, r'Firefox\41\Mozilla Firefox\firefox.exe'))
     profile = webdriver.FirefoxProfile(
@@ -24,13 +23,16 @@ def setup():
     profile.set_preference("browser.cache.offline.enable", False)
     profile.set_preference("network.http.use-cache", False)
     profile.set_preference("javascript.enabled", False)
-    extensionList = [os.path.join(os.path.join(rootPath, r'Firefox\41\extensions'), extension) for extension in os.listdir(os.path.join(
-        rootPath, r'Firefox\41\extensions'))]
-    for extension in extensionList:
-        logger.info("current add extension: %s", extension)
-        profile.add_extension(extension=extension)
-    profile.set_preference("extensions.firebug.currentVersion", "2.0.13")
+    # extensionList = [os.path.join(os.path.join(rootPath, r'Firefox\41\extensions'), extension) for extension in os.listdir(os.path.join(
+    #     rootPath, r'Firefox\41\extensions'))]
+    # for extension in extensionList:
+    #     logger.info("current add extension: %s", extension.split('\\')[-1])
+    #     profile.add_extension(extension=extension)
+    # profile.set_preference("extensions.firebug.currentVersion", "2.0.13")
     logger.info("Initialize web browser...")
-    browser = webdriver.Firefox(
-        firefox_profile=profile, firefox_binary=firefoxBin)
+    try:
+        browser = webdriver.Firefox(
+            firefox_profile=profile, firefox_binary=firefoxBin)
+    except Exception as ex:
+        logger.exception(ex)
     return browser
