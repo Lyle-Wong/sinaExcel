@@ -45,6 +45,7 @@ def setup_chrome():
     path = r'logs\no_binary_location.log'
     args = ['--verbose']
     options = webdriver.ChromeOptions()
+    options.add_argument('--lang=es')
     options.binary_location = os.path.join(rootPath, r'Chrome-bin\chrome.exe')
     try:
         browser = webdriver.Chrome(executable_path=chrome_driver, chrome_options=options,
