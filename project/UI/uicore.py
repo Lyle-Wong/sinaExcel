@@ -32,8 +32,8 @@ class CrawlApplication(object):
         y = int((hs / 2) - (self.h / 2))
         self.root.geometry('{}x{}+{}+{}'.format(self.w, self.h, x, y))
 
-    def UI_func(self):
-        crawl = crawlUI.CrawlUI()
+    def UI_func(self, is_use_chrome):
+        crawl = crawlUI.CrawlUI(is_use_chrome)
         try:
             crawl.ex_rate()
         except Exception as ex:
@@ -48,12 +48,13 @@ class CrawlApplication(object):
         t = threading.Thread(target=self.API_func)
         t.start()
 
-    def new_thread2(self):
-        t = threading.Thread(target=self.UI_func)
+    def new_thread2(self, is_use_chrome):
+        t = threading.Thread(target=self.UI_func, args=(is_use_chrome,))
         t.start()
 
     def submitBtn(self):
-        helv36 = font.Font(family='Helvetica', size=12, weight='bold')
+        helv36 = font.Font(family='Microsoft YaHei', size=12, weight='bold')
+        helv8 = font.Font(family='Microsoft YaHei', size=9)
         font_joke = font.Font(family='Microsoft YaHei', size=12)
         self.btnSer1 = tk.Button(self.root,
                                  command=self.new_thread1,
@@ -64,15 +65,19 @@ class CrawlApplication(object):
                                  )
         tk.Label(self.root).pack(padx=20, side='top')
         self.btnSer2 = tk.Button(self.root,
-                                 command=self.new_thread2,
+                                 command=lambda: self.new_thread2(is_use_chrome.get()),
                                  width=30,
                                  height=2,
                                  text="通过 UI 爬取数据",
                                  font=helv36
                                  )
         self.btnSer1.pack(padx=20, side='top')
-        tk.Label(self.root).pack(padx=20, side='top')
+        tk.Label(self.root).pack(padx=10, side='top')
         self.btnSer2.pack(padx=20, side='top')
+        tk.Label(self.root).pack(padx=10, side='top')
+        is_use_chrome = tk.IntVar()
+        self.cb = tk.Checkbutton(self.root, text='使用Chrome浏览器', variable=is_use_chrome, font=helv8)
+        self.cb.pack(padx=20, side='top')
         tk.Label(self.root).pack(padx=20, side='top')
         tk.Message(self.root,
                    text=qiushi.get_joke(),

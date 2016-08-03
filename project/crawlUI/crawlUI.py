@@ -16,22 +16,23 @@ from selenium.webdriver.common.action_chains import ActionChains
 from settings import settings
 from logger import logger
 from excelParse import excelUtil
-from . import setup
+from . import setup, setup_chrome
 from useful import TimeUtil
 
 
 class CrawlUI:
 
-    def __init__(self):
-        self.browser = setup()
-        self.browser.implicitly_wait(30)
+    def __init__(self, is_use_chrome):
+        if(is_use_chrome):
+            self.browser = setup_chrome()
+        else:
+            self.browser = setup()
         self.browser.maximize_window()
 
     def get_diniw(self, url):
         self.action = ActionChains(self.browser)
         logger.info("Open URL: %s", url)
         self.browser.get(url)
-        self.browser.implicitly_wait(30)
         canvasElement = self.browser.find_element_by_xpath(
             settings.canvas_Xpath)
         logger.info("Canvas is present: %s", canvasElement.size)

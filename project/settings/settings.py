@@ -39,7 +39,7 @@ root_path = os.getcwd()
 
 excel_name = "金融市场反应.xlsx"
 
-excel_new_name = "finical " + time.strftime('%Y-%m-%d') + ".xlsx"
+excel_new_name = "金融市场反应 " + time.strftime('%Y-%m-%d') + ".xlsx"
 
 excel_file_path = os.path.join(desktop_path, excel_new_name)
 
